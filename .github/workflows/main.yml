@@ -27,7 +27,8 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v4
-      - run: echo Hello World
 
       - name: Run lint
       - run : npm run linter
+
+      - run: echo Hello World
