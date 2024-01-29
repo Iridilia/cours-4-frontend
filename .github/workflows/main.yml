@@ -30,8 +30,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
-
+      - run: npm ci
       - run : npm run lint
