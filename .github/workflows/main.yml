@@ -22,4 +22,15 @@ jobs:
     name: Echo Hello World
     runs-on: ubuntu-latest
     steps:
-      - run: echo Hello World
+      - run: echo Hello World;
+
+  linter:
+    name: Run Linter And Formatteur
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+      - run: npm ci
+      - run : npm run lint
